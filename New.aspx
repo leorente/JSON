@@ -6,12 +6,12 @@
             var nomePagInicial = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 
             $("#Save").click(function () {
-                var NewPerson = {};
+                var NewPessoa = {};
                 $('input[type=text]').each(function () {
-                    NewPerson[this.id] = this.value;
+                    NewPessoa[this.id] = this.value;
                 });
 
-                Ajax({ 'obj': NewPerson }, nomePagInicial, $(this), "Gravando...", "Add");
+                Ajax({ 'obj': NewPessoa }, nomePagInicial, $(this), "Gravando...", "Add", "Grid.aspx");
             });
         });
     </script>
@@ -22,31 +22,21 @@
         <legend>Formulario</legend>
 
         <div class="form-group">
-            <label for="FirstName">First Name:</label>
-            <input type="text" id="FirstName" />
+            <label for="Nome">Nome:</label>
+            <input type="text" id="Nome" />
         </div>
         <div class="form-group">
-            <label for="LastName">Last Name:</label>
-            <input type="text" id="LastName" />
+            <label for="SobreNome">Sobre Nome:</label>
+            <input type="text" id="SobreNome" />
         </div>
         <div class="form-group">
-            <label>Address:</label>
-            <input type="text" id="Address" />
-        </div>
-
-        <div class="form-group">
-            <label>City:</label>
-            <input type="text" id="City" />
+            <label>Endereço:</label>
+            <input type="text" id="Endereco" />
         </div>
 
         <div class="form-group">
-            <label>State:</label>
-            <input type="text" id="State" />
-        </div>
-
-        <div class="form-group">
-            <label>Zip</label>
-            <input type="text" id="Zip" />
+            <label>Cep:</label>
+            <input type="text" id="Cep" />
         </div>
     </fieldset>
 

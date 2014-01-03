@@ -4,12 +4,12 @@
     <script>
         $(document).ready(function () {
             var nomePag = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
-            PopulaGrid(nomePag, "GetPerson", { 'obj': 0 }, $("#grid"));
+            PopulaGrid(nomePag, "Get", { 'obj': 0 }, $("#grid"));
 
             // Clique do botão delete do grid
             $('body').on('click', '.deleteReg', function () {
                 if (confirm("Você deseja apagar o registro com ID " + this.id + " ?")) {
-                    Ajax({ 'obj': this.id }, nomePag, $(this), "Apagando", "Delete");
+                    Ajax({ 'obj': this.id }, nomePag, $(this), "Apagando...", "Delete");
                     oTable.fnDeleteRow($(this).attr("itemIndex"));
                 } else
                     return false;
@@ -26,12 +26,10 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Address</th>
-                    <th>City</th>
-                    <th>State</th>
-                    <th>Zip</th>
+                    <th>Nome</th>
+                    <th>Sobre Nome</th>
+                    <th>Endereço</th>
+                    <th>Cep</th>
                     <th>Ações</th>
                 </tr>
             </thead>

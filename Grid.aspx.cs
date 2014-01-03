@@ -4,7 +4,7 @@ using System.Web.Script.Services;
 using System.Web.Services;
 
 public partial class Grid : System.Web.UI.Page {
-    public static List<Person> lista = new List<Person>();
+    public static List<Pessoa> lista = new List<Pessoa>();
 
     protected void Page_Load(object sender, EventArgs e) {
 
@@ -12,12 +12,12 @@ public partial class Grid : System.Web.UI.Page {
 
     [WebMethod]
     [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-    public static List<Person> GetPerson(int obj) {
-        return Person.GetPerson(obj); ;
+    public static List<Pessoa> Get(int obj) {
+        return Pessoa.Get(obj); ;
     }
 
     [WebMethod]
     public static void Delete(int obj) {
-        Person.Delete(obj);
+        Pessoa.Delete(obj);
     }
 }

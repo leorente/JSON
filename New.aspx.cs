@@ -9,7 +9,7 @@ public partial class New : System.Web.UI.Page {
     }
 
     [WebMethod]
-    public static void Add(Person obj) {
-        Person.Add(obj);
+    public static void Add(Pessoa obj) {
+        Pessoa.Add(obj);
     }
 }
