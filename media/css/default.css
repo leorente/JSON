@@ -1,0 +1,12 @@
+﻿Body {
+    padding-top: 70px;
+}
+
+.form-group label {
+    width: 80px;
+}
+
+.loading_msg {
+    display: none;
+    text-align: center;
+}
